@@ -1,0 +1,21 @@
+Outputs
+
+Type Coercion and Cohersion
+
+'10'-'4'-'3'+2-'5' // 0
+'10'-'4'-'3'+2-'5'
+0
+2 + 3+4+5+'5'
+'145'
+let n='1' + 1
+undefined
+let n='1' + 1
+undefined
+let n='1' + 1
+undefined
+n=n-1;
+10
+typeof(Nan)
+'undefined'
+typeof(undefined)
+'undefined'
