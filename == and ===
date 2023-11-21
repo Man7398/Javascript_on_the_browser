@@ -1,0 +1,28 @@
+ Equality Operators: == vs. ===
+_________________________________________________________________________________________________________________________________________
+===- It is a strict equal it does not perform type coercion!
+Okay, so imagine you have two things, like two toy cars. When you want to check if they are exactly the same, you use "===" -
+that means they must be the same type and have the same value. 
+
+Now, if you just want to see if they look the same, you use "==". It's like saying, "Are these two things similar to each other?"
+
+So, "==" checks if things are equal in value, while "===" not only checks the value but also the type of things.
+
+ex=
+const a = 100;
+const b = '100';
+
+console.log(a === b); //false
+__________________________________________________________________________________________________________________________________________
+Double equal
+Ex-
+const a = true;
+const b = 'true';
+
+console.log(a == b)
+
+Ok, so imagine you have two things: a blue ball and the word "blue" written on a piece of paper. The first line sets up a rule that says "a = true," which means the blue ball is true. The second line says "b = 'true'," which means the word "true" is written on the paper.
+
+The third line asks a question: "Is the blue ball equal to the word 'true' written on the paper?" When you compare them, the answer is actually no, because they are not the same thing. The blue ball is not the same as the word "true" written on the paper.
+
+So, the answer when you check if a is equal to b is "false," because they are not the same thing even though both of them have the word "true" in them.
