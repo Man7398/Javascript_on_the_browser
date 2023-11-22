@@ -1,12 +1,25 @@
 Define Functions In JS
 
+A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+
+or
+
 Functions are ways to declare something that you want or perform certain tasks !
+
 or 
 
 In JavaScript, functions are likened to recipes in a cookbook,
 guiding the computer on tasks, such as adding numbers or altering webpage colors, serving to organize code,
 prevent redundancy, and enable the reuse of specific instructions, thereby enhancing code clarity and structure.
 
+EXample=
+//function example 
+
+function fucntionName{
+//something inside;
+}
 function myFunction(p1, p2) {
   return p1 * p2;
 }
