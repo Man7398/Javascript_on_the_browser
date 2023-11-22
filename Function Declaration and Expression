@@ -18,3 +18,8 @@ For example:
 function greet() {
   return "Hello, World!";
 }
+
+// Function Expression
+var greet = function() {
+  return "Hello, World!";
+};
