@@ -1,0 +1,38 @@
+// 1. Calculate the average using an arrow function
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+// Test the calcAverage function
+console.log(calcAverage(3, 4, 5)); // Expected output: 4
+
+// 2. Calculate average scores for dolphins and koalas
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+
+// Log the average scores
+console.log(scoreDolphins); // Output: Average score for Dolphins
+console.log(scoreKoalas); // Output: Average score for Koalas
+
+// 3. Check the winner
+const checkWinner = (avgDolphins, avgKoalas) => {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log("No team wins");
+  }
+};
+
+// Test data 1
+checkWinner(scoreDolphins, scoreKoalas);
+
+// Test data 2 (reassigning scores)
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+
+// Log the new average scores
+console.log(scoreDolphins); // Output: Updated average score for Dolphins
+console.log(scoreKoalas); // Output: Updated average score for Koalas
+
+// Test data 2
+checkWinner(scoreDolphins, scoreKoalas);
