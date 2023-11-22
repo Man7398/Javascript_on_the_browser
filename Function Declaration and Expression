@@ -1,0 +1,18 @@
+Function Declaration and Expression
+
+Function declarations and function expressions are two ways of defining functions in JavaScript. Both are used to create named or anonymous functions, but they differ in how they are defined and hoisted within the code. Here's a brief explanation:
+
+
+Function declarations are defined using the keyword "function" followed by the function name. They can be called before they are declared in the code because they are hoisted to the top of their scope during the compilation phase.
+
+
+On the other hand, function expressions define functions as part of a variable assignment. They cannot be called before the definition since they are not hoisted in the same way as function declarations.
+
+
+To put it simply, function declarations are like standalone entities, while function expressions are just like assigning values to variables.
+
+
+For example:
+
+
+javascript
