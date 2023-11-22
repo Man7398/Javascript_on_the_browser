@@ -14,5 +14,7 @@ To put it simply, function declarations are like standalone entities, while func
 
 For example:
 
-
-javascript
+// Function Declaration
+function greet() {
+  return "Hello, World!";
+}
