@@ -1,0 +1,53 @@
+Essential Array Methods in JavaScript Explained
+
+Introduction:
+JavaScript provides a variety of built-in functions known as methods that can be directly applied to arrays. These methods serve as array operations, making it crucial to understand and incorporate them into your coding repertoire. In this tutorial, we will focus on some fundamental array methods to help you get accustomed to using them.
+
+Array Methods:
+
+push():
+
+Adds elements to the end of an array.
+Example:
+javascript
+Copy code
+friends.push('Jay');
+unshift():
+
+Adds elements to the beginning of an array.
+Example:
+javascript
+Copy code
+friends.unshift('John');
+pop():
+
+Removes the last element from the array.
+Example:
+javascript
+Copy code
+let popped = friends.pop();
+shift():
+
+Removes the first element from the array.
+Example:
+javascript
+Copy code
+let removed = friends.shift();
+indexOf():
+
+Returns the index of a specified element in the array.
+Example:
+javascript
+Copy code
+let index = friends.indexOf('Steven');
+includes():
+
+Returns true if the array includes a specified element; otherwise, returns false.
+Example:
+javascript
+Copy code
+if (friends.includes('Peter')) {
+  console.log('You have a friend called Peter.');
+}
+Conclusion:
+These are foundational array methods in JavaScript that enable efficient manipulation of arrays. While there are many more advanced methods available, mastering these basics is essential. Practice using them in different scenarios to enhance your understanding of array operations in JavaScript.
