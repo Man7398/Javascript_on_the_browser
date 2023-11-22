@@ -1,0 +1,12 @@
+Define Functions In JS
+
+Functions are ways to declare something that you want or perform certain tasks !
+or 
+
+In JavaScript, functions are likened to recipes in a cookbook,
+guiding the computer on tasks, such as adding numbers or altering webpage colors, serving to organize code,
+prevent redundancy, and enable the reuse of specific instructions, thereby enhancing code clarity and structure.
+
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
