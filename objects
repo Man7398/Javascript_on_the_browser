@@ -1,0 +1,8 @@
+Objects in jS
+________________________
+
+"Objects in JS" in JavaScript hold lots of related info, like a box holding different items –
+such as fruit color, size, and taste. They organize data about things, like a car or a person, using properties as labels for the info inside. For instance,
+a car object can have properties like "color" or "model," each with specific info. 
+It helps tidy up related info!
+
