@@ -34,3 +34,23 @@ const years = [1990, 1967, 2002, 2010, 2018];
 const ages = [calcAge(years[0]), calcAge(years[years.length - 2]), calcAge(years[years.length - 1])];
 console.log(ages);
 Arrays are versatile and powerful data structures in JavaScript, allowing you to store and manipulate collections of values efficiently.
+_______________________________________________________________________________________________________________________
+
+Access Elements of an Array
+You can access the elements of a multidimensional array using indices (0, 1, 2 …). For example
+
+let x = [
+['Jack', 24],
+['Sara', 23],
+['Peter', 24]
+];
+
+// access the first item
+console.log(x[0]); // ["Jack", 24]
+
+// access the first item of the first inner array
+console.log(x[0][0]); // Jack
+
+// access the second item of the third inner array
+console.log(x[2][1]); // 24
+
