@@ -1,0 +1,17 @@
+Key Concepts:
+Objects and Functions:
+
+Objects can hold different types of data, including primitive types, arrays, and even other objects.
+Functions are treated as values in JavaScript, and they can be added to objects as properties.
+Object Methods:
+
+Functions added to objects are called methods.
+Methods are accessed like other properties, using dot notation or bracket notation.
+Using this Keyword:
+
+The this keyword refers to the object that is calling the method.
+It allows methods to access and manipulate the data within the object without explicitly passing it as parameters.
+Efficient Property Retrieval:
+
+Methods can be used to calculate a value once and store it as a property in the object for later retrieval.
+This approach enhances efficiency, especially when the computation is resource-intensive.
