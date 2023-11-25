@@ -1,0 +1,62 @@
+1. Dot Notation:
+Dot notation is the primary and straightforward method for accessing object properties. It involves using a dot (.) followed by the property name.
+
+Syntax:
+
+objectName.propertyName;
+
+Example:
+
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30
+};
+
+console.log(person.firstName); // Output: John
+console.log(person.age);        // Output: 30
+In this example, person.firstName and person.age use dot notation to access their respective properties.
+
+2. Bracket Notation:
+Bracket notation provides an alternative way to access object properties. It uses square brackets ([]) with the property name inside.
+
+Syntax:
+objectName['propertyName'];
+Example:
+
+javascript
+Copy code
+const person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 30
+};
+
+console.log(person['firstName']); // Output: John
+console.log(person['age']);        // Output: 30
+Bracket notation is useful in scenarios where the property name contains special characters or spaces, or when dynamic property access is needed.
+
+Dynamic Property Access:
+
+javascript
+Copy code
+const propertyName = 'lastName';
+console.log(person[propertyName]); // Output: Doe
+Here, the variable propertyName is used dynamically to access the property.
+
+Choosing Between Dot and Bracket Notation:
+
+Dot Notation: More concise and commonly used when the property name is known and conforms to JavaScript identifier rules.
+
+Bracket Notation: Flexible and necessary when the property name is dynamic, stored in a variable, or contains special characters.
+
+Note: When using bracket notation, the property name must be a string or evaluate a string.
+
+Example:
+
+// Correct
+console.log(person['age']); // Output: 30
+
+// Incorrect - Syntax error
+console.log(person[age]);    // Throws an error unless `age` is defined as a variable
+In summary, both dot and bracket notation offer ways to access object properties, and the choice depends on the specific requirements of your code.
