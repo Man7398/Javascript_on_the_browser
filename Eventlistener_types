@@ -1,0 +1,42 @@
+# Event Listener with Query Selector in JavaScript
+
+## 🗒️ Answer
+
+**Using event listeners with query selector is a common practice in JavaScript to make your code more dynamic and flexible. Here's a simple example:**
+
+1. **Selecting an Element:**
+   - Use `document.querySelector()` to select an HTML element based on CSS-style selectors.
+   ```javascript
+   const myElement = document.querySelector('.my-class');
+   ```
+
+2. **Adding an Event Listener:**
+   - Attach an event listener to the selected element using `addEventListener()`.
+   - Example with a button click event:
+   ```javascript
+   myElement.addEventListener('click', function() {
+     // Your code here
+   });
+   ```
+
+3. **Using Arrow Function (Optional):**
+   - You can use an arrow function for brevity:
+   ```javascript
+   myElement.addEventListener('click', () => {
+     // Your code here
+   });
+   ```
+
+4. **Full Example:**
+   ```javascript
+   // Selecting an element with class 'my-button'
+   const myButton = document.querySelector('.my-button');
+
+   // Adding a click event listener
+   myButton.addEventListener('click', () => {
+     // Your code here
+   });
+   ```
+
+5. **Dynamic Selection:**
+   - Query selector allows dynamic selection based on various conditions like class, ID, or element type.
