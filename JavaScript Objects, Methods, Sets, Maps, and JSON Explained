@@ -1,0 +1,44 @@
+# JavaScript Objects, Methods, Sets, Maps, and JSON Explained
+
+## 🗒️ Answer
+
+1. **JavaScript Objects:**
+   - Objects in JavaScript are like containers that hold key-value pairs.
+   - Example: `let person = { name: "John", age: 30 };`
+   - Access values using `object.key` syntax.
+   - Objects are versatile and used for data representation.
+   - Source: [DigitalOcean - Understanding Map and Set Objects in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-map-and-set-objects-in-javascript)
+
+2. **JavaScript Methods:**
+   - Methods are functions that belong to objects.
+   - Example: `object.method()`.
+   - Perform actions or calculations on objects.
+   - Widely used in programming for reusable code.
+   - Source: [W3Schools - JavaScript Maps](https://www.w3schools.com/js/js_object_maps.asp)
+
+3. **Sets:**
+   - Sets in JavaScript store unique values.
+   - Created using `new Set()`.
+   - Ideal for managing lists with distinct elements.
+   - Methods like `add()`, `delete()`, and `has()` for manipulation.
+   - Source: [FreeCodeCamp - How to Use JavaScript Collections – Map and Set](https://www.freecodecamp.org/news/how-to-use-javascript-collections-map-and-set/)
+
+4. **Maps:**
+   - Maps are ordered collections of key/value pairs.
+   - Introduced in ECMAScript 2015.
+   - Use methods like `set()`, `get()`, and `delete()`.
+   - Versatile for associating data with keys.
+   - Source: [MDN Web Docs - Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+
+5. **JSON (JavaScript Object Notation):**
+   - Lightweight data interchange format.
+   - Easy-to-read text format for data objects.
+   - Commonly used for API communication.
+   - Example: `{"name":"John","age":30,"city":"New York"}`.
+   - Source: [GeeksforGeeks - JavaScript JSON Objects](https://www.geeksforgeeks.org/javascript-json-objects/)
+
+6. **JSON Data Types:**
+   - JSON supports data types like number, string, object, boolean, array, or null.
+   - Key-value pairs separated by a colon.
+   - Widely used for data exchange between a server and web application.
+   - Source: [GeeksforGeeks - JavaScript Map](https://www.geeksforgeeks.org/javascript-map/)
