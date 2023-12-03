@@ -7,6 +7,7 @@ that means they must be the same type and have the same value.
 Now, if you just want to see if they look the same, you use "==". It's like saying, "Are these two things similar to each other?"
 
 So, "==" checks if things are equal in value, while "===" not only checks the value but also the type of things.
+
 ex=
 const a = 100;
 const b = '100';
