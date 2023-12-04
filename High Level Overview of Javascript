@@ -1,0 +1,34 @@
+
+In this theory section, we're going to provide a broad introduction to JavaScript. Prepare yourself for a comprehensive overview!
+
+JavaScript is a programming language that is high-level, object-oriented and supports multiple programming styles. Let's break this down. 
+It's also prototype-based, and it can be interpreted or just-in-time compiled. It has dynamic typing, operates on a single thread, performs garbage collection, 
+and features first-class functions with a non-blocking event loop for concurrency.
+
+High-level languages like JavaScript handle resource management more abstractly, making them user-friendly but potentially slower. 
+Garbage collection helps with automatic memory management.
+
+When it comes to the execution of JavaScript, it can be either interpreted or just-in-time compiled.
+While computers only understand zeros and ones, we write code in JavaScript, which is human-readable. 
+The JavaScript engine then translates it into machine code.
+
+JavaScript is a multi-paradigm language that supports various programming approaches such as procedural, 
+object-oriented, and functional programming. 
+This flexibility allows us to choose the programming style that suits us best.
+
+In terms of object-oriented programming, JavaScript uses a prototype-based approach.
+Practically everything is treated as an object, and arrays, 
+for example, inherit methods from a prototype.
+
+Functions in JavaScript are treated as first-class citizens, meaning they can be passed around and returned.
+This feature enables powerful techniques and supports functional programming.
+
+JavaScript has dynamic typing, which means variable types are determined at runtime. This aspect of JavaScript is often debated but is inherent to the language's nature.
+
+The concurrency model in JavaScript involves a single thread and
+a non-blocking event loop. This means that long-running tasks are handled in the background
+to prevent blocking the main thread.
+
+This overview establishes the foundation for our in-depth exploration of JavaScript,
+where we will cover these topics and more. Don't worry about feeling overwhelmed; 
+it's important to grasp the big picture before diving into specifics.
