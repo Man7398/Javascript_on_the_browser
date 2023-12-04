@@ -1,0 +1,34 @@
+**Primitives vs. Objects in JavaScript:**
+
+**Primitives:**
+- **Examples:** Numbers, Strings, Booleans, Undefined, Null, Symbol, BigInt.
+- **Storage:** Stored directly in the call stack.
+- **Behavior:** Copied by value.
+- **Immutability:** Values are immutable (unchangeable).
+
+```javascript
+let x = 5;
+let y = x;
+x = 10;
+console.log(x); // 10
+console.log(y); // 5
+```
+
+**Objects:**
+- **Examples:** Arrays, Functions, Objects.
+- **Storage:** Reference types stored in the heap; variables hold references in the call stack.
+- **Behavior:** Copied by reference.
+- **Mutability:** Values can be changed (mutable).
+
+```javascript
+let obj1 = { name: "John" };
+let obj2 = obj1;
+obj2.name = "Jane";
+console.log(obj1.name); // "Jane"
+console.log(obj2.name); // "Jane"
+```
+
+**Key Takeaways:**
+- Primitives are copied by their actual value, creating independent copies.
+- Objects are copied by reference, leading to shared references to the same object.
+- Understanding this distinction is crucial for handling data in JavaScript effectively.
