@@ -13,3 +13,80 @@ Key takeaways:
 6. Order of function calls doesn't affect the scope chain.
 
 Understanding scoping is fundamental to writing effective JavaScript code. See you in the next coding lecture!
+
+Certainly! Let's break down the JavaScript code step by step and discuss the scoping concepts involved.
+
+// Function declaration: calcAge
+function calcAge(birthYear) {
+  // Function scope
+  const age = new Date().getFullYear() - birthYear;
+  return age;
+}
+
+// Global variable
+const first_name = "Jonas";
+
+// Function call
+console.log(first_name); // Outputs: Jonas
+
+// Function call with a parameter
+const userAge = calcAge(1991);
+
+// Logging a variable from the global scope inside the function
+console.log(first_name); // Outputs: Jonas
+
+// Nested function declaration: printAge
+function printAge() {
+  // Function scope
+  const output = `You are ${userAge} years old, born in 1991.`;
+
+  // Nested function call
+  console.log(output); // Outputs: You are [calculated age] years old, born in 1991.
+
+  // Another nested function declaration: isMillennial
+  if (userAge >= 1981 && userAge < 1996) {
+    // Block scope
+    const str = `Oh, and you're a millennial, ${first_name}!`;
+    console.log(str); // Outputs: Oh, and you're a millennial, Jonas!
+  }
+
+  // Logging the millennial variable outside its block scope
+  console.log(millennial); // Outputs: true
+}
+
+// Nested function call
+printAge();
+
+// Block scope with const variable
+{
+  const first_name = "Steven";
+  console.log(first_name); // Outputs: Steven
+}
+
+// Attempting to log the const variable outside its block scope
+console.log(first_name); // Outputs: Jonas
+
+// Reassigning the output variable in the printAge function
+output = "New output";
+
+// Attempting to log the reassigned output variable outside its block scope
+console.log(output); // Outputs: New output
+```
+
+**Key Points:**
+
+1. **Scope Chain:** JavaScript uses a scope chain to look up variables. It starts with the innermost scope and moves outward until it finds the variable or reaches the global scope.
+
+2. **Global Scope:** Variables declared outside any function or block have global scope and can be accessed from any inner scope.
+
+3. **Function Scope:** Variables declared inside a function have function scope and are accessible within that function and any nested functions.
+
+4. **Block Scope:** Introduced with ES6 (`let` and `const`), variables declared inside a block (e.g., if statement or loop) have block scope.
+
+5. **Variable Lookup:** When a variable is not found in the current scope, JavaScript looks up the scope chain until it finds the variable or reaches the global scope.
+
+6. **Variable Redefinition:** Reassigning a variable in an inner scope modifies the variable in the current scope and doesn't affect the variable in the outer scope.
+
+7. **Strict Mode:** In strict mode, functions declared using `function` keyword are block-scoped, while non-strict mode considers them to be function-scoped.
+
+This example demonstrates various scoping scenarios, including function scope, block scope, and the scope chain. Understanding these concepts is crucial for writing maintainable and bug-free JavaScript code.
