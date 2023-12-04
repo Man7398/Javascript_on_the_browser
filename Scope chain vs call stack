@@ -1,0 +1,24 @@
+The scope chain and the call stack are both integral components of how JavaScript manages execution contexts and variable access, but they serve different purposes.
+
+1. **Scope Chain:**
+   - **Definition:** The scope chain refers to the hierarchy of scopes in which variables and functions are accessible.
+   - **Purpose:** It determines the order in which scopes are searched when the JavaScript engine looks for a variable during execution.
+   - **Functionality:** When a variable is not found in the current scope, the engine looks up the scope chain until it finds the variable or reaches the global scope. This process is known as variable lookup.
+
+2. **Call Stack:**
+   - **Definition:** The call stack is a mechanism for managing the flow of execution in a program by keeping track of function calls.
+   - **Purpose:** It helps the JavaScript engine keep track of which function is currently being executed and the functions that called it.
+   - **Functionality:** When a function is called, a new execution context is created and pushed onto the call stack. When the function completes, its execution context is popped off the stack. This ensures that functions are executed in the correct order.
+
+**Key Differences:**
+- **Functionality:**
+  - The scope chain is primarily concerned with variable access and lookup.
+  - The call stack manages the order of function calls and the execution flow.
+- **Hierarchy:**
+  - The scope chain is hierarchical, defining where variables and functions are accessible in relation to their location in the code.
+  - The call stack is a linear structure that reflects the order of function calls during program execution.
+- **Usage:**
+  - The scope chain is used during variable lookup and access.
+  - The call stack is crucial for managing the flow of program execution and ensuring the correct order of function calls.
+
+In summary, while the scope chain determines where variables are accessible, the call stack manages the order of function calls and execution flow in the program. They work together to facilitate the proper execution of JavaScript code.
