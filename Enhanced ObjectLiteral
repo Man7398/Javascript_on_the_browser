@@ -1,0 +1,67 @@
+It seems like there might be a typo in your question ("enhanced onject litera;"). Assuming you are referring to "enhanced object literals" in JavaScript, I'll provide a brief summary.
+
+Enhanced object literals refer to new features and syntax improvements introduced in ECMAScript 2015 (ES6) that make working with objects in JavaScript more convenient and expressive.
+
+Here are some key features of enhanced object literals:
+
+1. **Shorthand Property Names:**
+   - Before ES6:
+
+     ```javascript
+     const x = 5, y = 10;
+     const point = { x: x, y: y };
+     ```
+
+   - With ES6:
+
+     ```javascript
+     const x = 5, y = 10;
+     const point = { x, y };
+     ```
+
+   Shorthand property names allow you to use the variable names directly as property names if they match.
+
+2. **Method Shorthand:**
+   - Before ES6:
+
+     ```javascript
+     const obj = {
+       sayHello: function() {
+         console.log('Hello');
+       }
+     };
+     ```
+
+   - With ES6:
+
+     ```javascript
+     const obj = {
+       sayHello() {
+         console.log('Hello');
+       }
+     };
+     ```
+
+   Method shorthand provides a more concise way to define methods inside objects.
+
+3. **Computed Property Names:**
+   - Before ES6:
+
+     ```javascript
+     const propKey = 'dynamicKey';
+     const obj = {};
+     obj[propKey] = 'someValue';
+     ```
+
+   - With ES6:
+
+     ```javascript
+     const propKey = 'dynamicKey';
+     const obj = {
+       [propKey]: 'someValue'
+     };
+     ```
+
+   Computed property names allow you to use expressions and variables as property names.
+
+These enhancements make the syntax for working with objects more concise and readable, contributing to a cleaner and more maintainable codebase.
