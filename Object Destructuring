@@ -65,3 +65,86 @@ Absolutely, let's summarize the key points regarding object destructuring in Jav
    - Default values enhance flexibility, allowing for graceful handling of missing or undefined properties.
 
 Understanding and applying object destructuring can significantly improve code readability and maintainability in JavaScript projects.
+___________________________________________________________________________________________________________________________________
+
+Jonathan Example-
+
+Certainly! Let's break down the key concepts of object destructuring using JavaScript code.
+
+### Basic Object Destructuring:
+
+```javascript
+// Given object
+const restaurant = {
+  name: 'Italian Bistro',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  openingHours: {
+    Monday: { open: 12, close: 22 },
+    Tuesday: { open: 12, close: 22 },
+    Wednesday: { open: 12, close: 22 },
+    // ... (other days)
+  },
+  // ... (other properties)
+};
+
+// Destructuring to extract specific properties
+const { name, categories, openingHours } = restaurant;
+
+// Output the extracted values
+console.log(name); // 'Italian Bistro'
+console.log(categories); // ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+console.log(openingHours); // Object representing opening hours
+```
+
+### Changing Variable Names:
+
+```javascript
+// Destructuring with changed variable names
+const { name: restaurantName, openingHours: hours, categories: tags } = restaurant;
+
+// Output the extracted values with new variable names
+console.log(restaurantName); // 'Italian Bistro'
+console.log(hours); // Object representing opening hours
+console.log(tags); // ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+```
+
+### Default Values:
+
+```javascript
+// Destructuring with default values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+
+// Output the extracted values with default values
+console.log(menu); // Default value: []
+console.log(starters); // Extracted starter menu or default value if not present
+```
+
+### Nested Objects:
+
+```javascript
+// Destructuring nested objects
+const { openingHours: { Friday: { open, close } } } = restaurant;
+
+// Output the extracted values from nested objects
+console.log(open); // Opening time for Friday
+console.log(close); // Closing time for Friday
+```
+
+### Practical Application - Function Parameters:
+
+```javascript
+// Function that takes an object as a parameter
+function orderDelivery({ starterIndex = 1, mainIndex = 0, time = '20:00', address }) {
+  // Destructure the object immediately in the function's arguments
+  console.log(`Order received! Food: ${restaurant.starterMenu[starterIndex]} and ${restaurant.mainMenu[mainIndex]}.`);
+  console.log(`To be delivered to: ${address} at ${time}.`);
+}
+
+// Calling the function with an object as an argument
+restaurant.orderDelivery({
+  starterIndex: 2,
+  address: 'Via del Sole, 21',
+});
+```
+
+In this example, we covered basic object destructuring, changing variable names, using default values, handling nested objects, and a practical application of using object destructuring in a function with default values for parameters.
