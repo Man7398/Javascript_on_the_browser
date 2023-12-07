@@ -48,3 +48,64 @@ ________________________________________________________________________________
 PART 2
 ______________________________________________________________________________________________________________________________________________________________________
 
+In this part of the tutorial, we covered various string methods in JavaScript:
+
+1. **toLowerCase() and toUpperCase():** These methods change the case of a string. For example:
+   ```javascript
+   const text = 'Hello World';
+   console.log(text.toLowerCase()); // Outputs: hello world
+   console.log(text.toUpperCase()); // Outputs: HELLO WORLD
+   ```
+
+2. **Fixing Capitalization in a Name:**
+   ```javascript
+   const passenger = 'jOnAs';
+   const passengerLower = passenger.toLowerCase();
+   const passengerCorrect =
+     passengerLower[0].toUpperCase() + passengerLower.slice(1);
+   console.log(passengerCorrect); // Outputs: Jonas
+   ```
+
+3. **Checking User Input Email:**
+   ```javascript
+   const loginEmail = '  HeLLo@jONas.iO\n ';
+   const normalizedEmail = loginEmail.toLowerCase().trim();
+   console.log(normalizedEmail); // Outputs: hello@jonas.io
+   ```
+
+4. **Replacing Parts of Strings:**
+   ```javascript
+   let priceGreatBritain = '288,97 pounds';
+   let priceUS = priceGreatBritain.replace('pound', '$').replace(',', '.');
+   console.log(priceUS); // Outputs: 288.97 $
+
+   const announcement = 'All passengers come to boarding door 23!';
+   const correctedAnnouncement = announcement.replace(/door/g, 'gate');
+   console.log(correctedAnnouncement); // Outputs: All passengers come to boarding gate 23!
+   ```
+
+5. **Boolean Methods (includes, startsWith, endsWith):**
+   ```javascript
+   const airplane = 'A320neo';
+   console.log(airplane.includes('A320')); // Outputs: true
+   console.log(airplane.startsWith('Air')); // Outputs: false
+   console.log(airplane.endsWith('neo')); // Outputs: true
+   ```
+
+6. **Checking Baggage for Boarding:**
+   ```javascript
+   const checkBaggage = function (items) {
+     const baggage = items.toLowerCase();
+     if (baggage.includes('knife') || baggage.includes('gun')) {
+       console.log('You are not allowed on board.');
+     } else {
+       console.log('Welcome aboard!');
+     }
+   };
+
+   checkBaggage('I have a laptop, some food, and a pocket knife.');
+   checkBaggage('I have some socks and a camera.');
+   checkBaggage('Got some snacks and a gun for protection.');
+   ```
+
+Always remember to normalize input data, especially strings, to avoid case sensitivity issues and ensure consistency. The `toLowerCase()` method is often used for this purpose. Additionally, string methods like `includes`, `startsWith`, `endsWith`, and `replace` are powerful tools for working with and manipulating strings.
