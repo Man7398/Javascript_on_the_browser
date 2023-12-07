@@ -1,0 +1,50 @@
+____________________________________________________________________________________________________________________________________________________________________-
+PART 1
+______________________________________________________________________________________________________________________________________________________________________
+In JavaScript, strings, despite being primitives, have methods associated with them. These methods are automatically available when you call them on a string primitive. This process is known as "boxing," where the string is temporarily converted into a string object, allowing methods to be applied. After the operation, the result is converted back to a regular string primitive.
+
+```javascript
+// Using string methods on a string primitive
+const airline = 'TAP Air Portugal';
+
+// IndexOf and lastIndexOf
+console.log(airline.indexOf('r')); // 6
+console.log(airline.lastIndexOf('r')); // 10
+
+// Searching for entire words
+console.log(airline.indexOf('Portugal')); // 8
+console.log(airline.indexOf('portugal')); // -1 (case-sensitive)
+
+// Extracting part of a string with slice
+console.log(airline.slice(4)); // "Air Portugal"
+console.log(airline.slice(4, 7)); // "Air"
+
+// Dynamic extraction using indexOf and lastIndexOf
+console.log(airline.slice(airline.indexOf(' ') + 1));
+console.log(airline.slice(0, airline.lastIndexOf(' ')));
+
+// Extracting from the end using negative indices
+console.log(airline.slice(-2)); // "al"
+console.log(airline.slice(1, -1)); // "AP Air Portuga"
+
+// Function to check if a seat is a middle seat
+const checkMiddleSeat = function (seat) {
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') {
+    console.log('You got the middle seat! 😢');
+  } else {
+    console.log('You got lucky! 😎');
+  }
+};
+
+// Testing the function
+checkMiddleSeat('23C'); // You got the middle seat! 😢
+checkMiddleSeat('3E'); // You got the middle seat! 😢
+checkMiddleSeat('7B'); // You got lucky! 😎
+```
+n the example, various string methods such as `indexOf`, `lastIndexOf`, and `slice` are used to manipulate and extract information from a string. The `checkMiddleSeat` function demonstrates dynamic extraction of the last character and checks if it corresponds to a middle seat.
+
+____________________________________________________________________________________________________________________________________________________________________-
+PART 2
+______________________________________________________________________________________________________________________________________________________________________
+
