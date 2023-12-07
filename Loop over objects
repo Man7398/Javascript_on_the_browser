@@ -1,0 +1,38 @@
+In this lesson, we learned about different ways to loop over objects in JavaScript using the `for...of` loop in an indirect way. Here's a summary of the key points:
+
+1. **Looping Over Property Names (Keys):**
+   ```javascript
+   const keysArray = Object.keys(openingHours);
+   for (const day of keysArray) {
+     console.log(day);
+   }
+   ```
+   The `Object.keys()` method returns an array of the object's property names, and we can then loop over that array.
+
+2. **Looping Over Property Values:**
+   ```javascript
+   const valuesArray = Object.values(openingHours);
+   for (const value of valuesArray) {
+     console.log(value);
+   }
+   ```
+   The `Object.values()` method returns an array of the object's property values, and we can loop over that array.
+
+3. **Looping Over Both Keys and Values (Entries):**
+   ```javascript
+   const entriesArray = Object.entries(openingHours);
+   for (const [day, { open, close }] of entriesArray) {
+     console.log(`On ${day}, we open at ${open} and close at ${close}.`);
+   }
+   ```
+   The `Object.entries()` method returns an array of the object's key-value pairs as arrays. We can destructure each entry to get both the key and value.
+
+4. **Using Destructuring in Loop:**
+   ```javascript
+   for (const [day, { open, close }] of Object.entries(openingHours)) {
+     console.log(`On ${day}, we open at ${open} and close at ${close}.`);
+   }
+   ```
+   We can directly destructure the entries within the loop header for cleaner code.
+
+These approaches provide flexibility when dealing with objects, allowing you to extract and process keys, values, or both, based on your requirements.
