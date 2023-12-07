@@ -1,0 +1,30 @@
+In summary, let's compare the built-in data structures in JavaScript (arrays, sets, objects, and maps) and understand when to use each of them:
+
+### Arrays:
+- **Use:** Simple lists of values.
+- **When to Choose:**
+  - When values need to be stored in order.
+  - When values might contain duplicates.
+  - When data manipulation is required (many array methods are available).
+
+### Sets:
+- **Use:** Collections of unique values.
+- **When to Choose:**
+  - When working with unique values.
+  - When high performance is crucial for operations like search and deletion.
+
+### Objects:
+- **Use:** Key-value pairs where the values are described using keys.
+- **When to Choose:**
+  - Traditional choice for key-value pairs.
+  - When values are functions (methods) or when working with JSON data.
+  - When easy access and writing of data using dot or bracket notation are preferred.
+
+### Maps:
+- **Use:** Key-value pairs with better performance and flexibility.
+- **When to Choose:**
+  - When a key can be of any data type.
+  - When high performance is needed.
+  - When easy iteration and size computation are required.
+
+In practice, arrays and objects are commonly used for various scenarios, while sets and maps provide specific advantages in terms of uniqueness, performance, and flexibility. The choice of which data structure to use depends on the specific requirements of your application and the type of data you are working with.
