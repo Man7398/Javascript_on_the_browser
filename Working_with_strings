@@ -109,3 +109,85 @@ In this part of the tutorial, we covered various string methods in JavaScript:
    ```
 
 Always remember to normalize input data, especially strings, to avoid case sensitivity issues and ensure consistency. The `toLowerCase()` method is often used for this purpose. Additionally, string methods like `includes`, `startsWith`, `endsWith`, and `replace` are powerful tools for working with and manipulating strings.
+
+______________________________________________________________________________________________________________________________________
+PART 3
+_________________________________________________________________________________________________________________________________________
+
+Absolutely! Let's dive into a more detailed explanation of some of the string methods you've covered, with additional examples.
+
+### 1. **`split` Method:**
+The `split` method is used to divide a string into an array of substrings based on a specified delimiter.
+
+#### Example:
+```javascript
+const sentence = "A+very+nice+string";
+const wordsArray = sentence.split("+");
+
+console.log(wordsArray);
+// Output: ["A", "very", "nice", "string"]
+```
+
+Here, the string `sentence` is split into an array using the `+` as a delimiter.
+
+### 2. **`join` Method:**
+The `join` method is the reverse of `split`. It joins the elements of an array into a single string, using a specified separator.
+
+#### Example:
+```javascript
+const words = ["Mr.", "John", "Doe"];
+const fullName = words.join(" ");
+
+console.log(fullName);
+// Output: "Mr. John Doe"
+```
+
+Here, the array `words` is joined into a string with a space as the separator.
+
+### 3. **Destructuring Assignment with `split`:**
+Destructuring assignment can be combined with `split` to directly extract values from the split array.
+
+#### Example:
+```javascript
+const fullName = "John Doe";
+const [firstName, lastName] = fullName.split(" ");
+
+console.log(firstName); // Output: "John"
+console.log(lastName);  // Output: "Doe"
+```
+
+The `split` method is used to separate the first name and last name, and destructuring assignment assigns them to variables.
+
+### 4. **`padStart` and `padEnd` Methods:**
+These methods are used for padding a string with a specified character until it reaches a certain length.
+
+#### Example:
+```javascript
+const message = "Go to gate 23";
+const paddedMessageStart = message.padStart(25, "+");
+const paddedMessageEnd = message.padEnd(25, "+");
+
+console.log(paddedMessageStart);
+// Output: "+++++++++++Go to gate 23"
+
+console.log(paddedMessageEnd);
+// Output: "Go to gate 23+++++++++++"
+```
+
+Here, `padStart` adds `+` characters to the start of the message, and `padEnd` adds them to the end.
+
+### 5. **`repeat` Method:**
+The `repeat` method repeats a string a specified number of times.
+
+#### Example:
+```javascript
+const weatherMessage = "Bad weather, all departures delayed. ";
+const repeatedMessage = weatherMessage.repeat(3);
+
+console.log(repeatedMessage);
+// Output: "Bad weather, all departures delayed. Bad weather, all departures delayed. Bad weather, all departures delayed. "
+```
+
+Here, the weather message is repeated three times.
+
+These examples provide a more in-depth understanding of how these string methods work. If you have specific questions about any of these examples or want more clarification on a particular topic, feel free to ask!
