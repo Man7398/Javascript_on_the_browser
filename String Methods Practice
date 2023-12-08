@@ -1,0 +1,46 @@
+Certainly! Below is the JavaScript code based on the provided explanation:
+
+```javascript
+// Given flights string
+const flightsString = "delayed_departure;FAO;TXL;1125_plus_delayed_arrival;TXL;SFO;1630_plus_departure;SFO;JFK;0830_plus_arrival;JFK;FAO;2000";
+
+// Splitting the string into an array of flights
+const flights = flightsString.split("_plus_");
+
+// Function to format airport codes
+const getCode = (codeString) => codeString.slice(0, 3).toUpperCase();
+
+// Function to format time
+const formatTime = (timeString) => timeString.replace(":", "H");
+
+// Formatting each flight
+const formattedFlights = flights.map((flight) => {
+  // Destructuring flight information
+  const [type, from, to, time] = flight.split(";");
+
+  // Formatting airport codes
+  const formattedFrom = getCode(from);
+  const formattedTo = getCode(to);
+
+  // Formatting time
+  const formattedTime = formatTime(time);
+
+  // Adding emoji for delayed flights
+  const delayEmoji = type.startsWith("delayed") ? "🔴 " : "";
+
+  // Constructing the output string
+  const output = `${delayEmoji}${type.replace(/_/g, " ")} (${formattedFrom} to ${formattedTo}) at ${formattedTime}`;
+
+  return output;
+});
+
+// Finding the maximum length for alignment
+const maxLength = formattedFlights.reduce((max, flight) => Math.max(max, flight.length), 0);
+
+// Aligning each flight string using padStart
+const alignedFlights = formattedFlights.map((flight) => flight.padStart(maxLength));
+
+// Logging the aligned flights to the console
+alignedFlights.forEach((flight) => console.log(flight));
+```
+
