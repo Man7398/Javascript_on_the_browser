@@ -1,0 +1,47 @@
+Certainly! Let's delve into creating our own higher-order functions with some code examples.
+
+```javascript
+// Example 1: Function that receives another function
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+function higherOrderFunction(callback) {
+  console.log('Executing the higher-order function');
+  callback('John'); // Callback function is invoked
+}
+
+higherOrderFunction(greet);
+
+// Example 2: Function that returns another function
+function multiplyBy(factor) {
+  // This inner function is returned
+  return function (number) {
+    return number * factor;
+  };
+}
+
+const double = multiplyBy(2);
+const triple = multiplyBy(3);
+
+console.log(double(5)); // Output: 10
+console.log(triple(5)); // Output: 15
+
+// Example 3: Using a built-in higher-order function
+const numbers = [1, 2, 3, 4, 5];
+
+// Map is a higher-order function that applies a callback to each element
+const squaredNumbers = numbers.map(function (number) {
+  return number * number;
+});
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+```
+
+In the first example, we have a higher-order function (`higherOrderFunction`) that takes another function (`greet`) as an argument and invokes it inside. This is an example of a function that receives another function.
+
+In the second example, we define a higher-order function (`multiplyBy`) that returns another function. This returned function, when invoked, multiplies its argument by the factor specified in the outer function. This demonstrates a function that returns another function.
+
+In the third example, we use the built-in higher-order function `map`. It applies a callback function to each element of the array (`numbers`), creating a new array with the results. In this case, we square each number in the array.
+
+These examples illustrate the concept of first-class functions and how they enable the creation of higher-order functions in JavaScript.
