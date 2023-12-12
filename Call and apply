@@ -1,0 +1,58 @@
+In JavaScript, the `this` keyword is dynamically determined based on how a function is called. Sometimes, you might want to manually set the `this` keyword for a function, and you can achieve this using the `call` and `apply` methods.
+
+Here's a brief summary:
+
+### `call` Method:
+
+- The `call` method is a function method in JavaScript.
+- It allows you to call a function with a specified `this` value and a list of arguments.
+- The first argument to `call` is the value that should be used as `this`.
+- Subsequent arguments are the arguments to pass to the function.
+
+**Example:**
+
+```javascript
+function bookFlight(flightNumber, passengerName) {
+    console.log(`${passengerName} booked a seat on ${this.airline} flight ${flightNumber}`);
+    this.bookings.push({ flight: `${this.iataCode}${flightNumber}`, passenger: passengerName });
+}
+
+const lufthansa = {
+    airline: 'Lufthansa',
+    iataCode: 'LH',
+    bookings: [],
+};
+
+const eurowings = {
+    airline: 'Eurowings',
+    iataCode: 'EW',
+    bookings: [],
+};
+
+bookFlight.call(eurowings, 239, 'Sarah Williams');
+bookFlight.call(lufthansa, 635, 'John Smith');
+```
+
+### `apply` Method:
+
+- Similar to `call`, the `apply` method sets the `this` value and accepts an array of arguments.
+- The second argument to `apply` is an array of arguments.
+
+**Example:**
+
+```javascript
+bookFlight.apply(lufthansa, [583, 'George Cooper']);
+```
+
+### Modern Approach: Using Spread Operator with `call`:
+
+- With modern JavaScript, you can achieve the same result as `apply` by using the spread operator with `call`.
+
+**Example:**
+
+```javascript
+const flightData = [583, 'George Cooper'];
+bookFlight.call(lufthansa, ...flightData);
+```
+
+Both `call` and `apply` allow you to explicitly set the `this` value for a function and pass arguments. In the next lecture, the `bind` method will be introduced, which also serves this purpose.
