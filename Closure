@@ -1,0 +1,37 @@
+Let's delve into a practical example to illustrate closures in JavaScript. Suppose we want to create a function that generates a counter. However, we want the counter variable to be private and not directly accessible from outside the function. Closures can help us achieve this encapsulation.
+
+```javascript
+function createCounter() {
+  let counter = 0; // The private variable
+
+  function increment() {
+    counter++;
+    console.log(counter);
+  }
+
+  return increment; // Returning the inner function (closure)
+}
+
+// Creating two independent counters
+const counter1 = createCounter();
+const counter2 = createCounter();
+
+// Each time we call the returned function, it remembers its own counter variable
+counter1(); // Output: 1
+counter1(); // Output: 2
+
+counter2(); // Output: 1 (independent of counter1)
+
+// Trying to access the private variable directly results in an error
+// console.log(counter); // Error: counter is not defined
+```
+
+In this example:
+
+- The `createCounter` function initializes a private variable `counter` and defines an inner function `increment`.
+- The inner function `increment` is a closure because it retains access to the `counter` variable even after `createCounter` has completed execution.
+- The `createCounter` function returns the inner function, effectively exposing only the `increment` function to the outside world.
+- When we create multiple counters (`counter1` and `counter2`), each counter maintains its own private `counter` variable. They are independent of each other.
+- Attempts to access the private variable directly from outside the function result in an error, showcasing the encapsulation provided by closures.
+
+This example demonstrates how closures allow us to create private variables and achieve data encapsulation in JavaScript. The inner function `increment` forms a closure, preserving access to the outer variable `counter`.
