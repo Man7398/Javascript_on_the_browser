@@ -1,0 +1,82 @@
+The `bind` method in JavaScript is used to create a new function that, when called, has its `this` keyword set to a specific value. Unlike the `call` method,
+which immediately invokes the function, `bind` returns a new function with the specified `this` value.
+
+Here's a breakdown of how `bind` works, using an example related to an airline booking system:
+
+### Basic `bind` Usage:
+
+```javascript
+// Original function
+function book(passenger, flightNumber) {
+    console.log(`${passenger} booked a seat on flight ${this.name}${flightNumber}`);
+}
+
+// Object representing an airline
+const Eurowings = {
+    name: "EW",
+    bookings: [],
+};
+
+// Using call to set 'this' to Eurowings
+book.call(Eurowings, "Steven Williams", 23);
+
+// Using bind to create a new function with 'this' set to Eurowings
+const bookEW = book.bind(Eurowings);
+
+// Using the new function created by bind
+bookEW("Steven Williams", 23);
+```
+
+In this example, `bookEW` is a new function created by `bind`, and it already has `this` set to `Eurowings`. So when you call `bookEW("Steven Williams", 23)`, it looks like a regular function call, but `this` is automatically set to `Eurowings`.
+
+### Partial Application with `bind`:
+
+```javascript
+// Original function with two parameters
+function book(flightNumber, passenger) {
+    console.log(`${passenger} booked a seat on flight ${this.name}${flightNumber}`);
+}
+
+// Using bind to create a new function with 'this' set to Eurowings and flightNumber preset
+const bookEW23 = book.bind(Eurowings, 23);
+
+// Using the new function with preset flightNumber
+bookEW23("Steven Williams"); // Automatically uses flightNumber 23
+```
+
+Here, `bookEW23` is a new function created by `bind` with `Eurowings` set as `this` and `flightNumber` preset to 23. When you call `bookEW23("Steven Williams")`, it only requires the passenger name, as the flight number is already preset.
+
+### Using `bind` with Event Listeners:
+
+```javascript
+const Lufthansa = {
+    planes: 300,
+    buyPlane: function () {
+        this.planes++;
+        console.log(this.planes);
+    },
+};
+
+// Adding an event listener to a button
+const button = document.querySelector('.buy');
+button.addEventListener('click', Lufthansa.buyPlane.bind(Lufthansa));
+```
+
+In this example, the `buyPlane` method is used as an event listener. `bind` is used to ensure that when the button is clicked, `this` inside the `buyPlane` method refers to the `Lufthansa` object.
+
+### Advanced Usage - Partial Application without 'this':
+
+```javascript
+// General function to add tax to a value
+const addTax = (taxRate, value) => value + value * taxRate;
+
+// Using bind to create a new function with taxRate preset
+const addVAT = addTax.bind(null, 0.23);
+
+// Using the new function with preset taxRate
+console.log(addVAT(100)); // Outputs 123
+```
+
+In this example, `addVAT` is a new function created by `bind`, but there's no specific `this` involved. Instead, it sets the first argument (`taxRate`) to 0.23. This is an example of partial application without focusing on `this`.
+
+Understanding `bind` is crucial for more advanced JavaScript programming, especially in scenarios where you need to control the `this` context or partially apply arguments to functions.
