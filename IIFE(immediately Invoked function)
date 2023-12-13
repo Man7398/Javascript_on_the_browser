@@ -1,0 +1,32 @@
+The concept you're discussing is called Immediately Invoked Function Expression (IIFE) in JavaScript. An IIFE is a function expression that is defined and invoked immediately after its creation. It's often used when you need to create a private scope for data encapsulation and execute a function only once.
+
+Here's a brief summary of the key points from your text:
+
+1. **Creating an IIFE with a regular function:**
+   ```javascript
+   (function runOnce() {
+       console.log("This will run only once");
+   })();
+   ```
+   Wrapping the function declaration in parentheses turns it into an expression, and appending `()` immediately invokes it.
+
+2. **Creating an IIFE with an arrow function:**
+   ```javascript
+   (() => {
+       console.log("This arrow function will run only once");
+   })();
+   ```
+
+3. **Purpose of IIFE:**
+   - IIFE helps in creating a private scope for data encapsulation.
+   - It ensures that variables declared within the function are not accessible from outside, enhancing data privacy.
+
+4. **Use of IIFE in Modern JavaScript:**
+   - With the introduction of `let` and `const` in ES6, which create block-scoped variables, the need for IIFE to create new scopes has diminished.
+   - However, IIFE is still relevant when you specifically want to execute a function only once.
+
+5. **Avoiding the use of `var`:**
+   - IIFE was commonly used in the past to emulate block-scoping in situations where only `var` was available.
+   - With the availability of `let` and `const`, creating blocks suffices for most scenarios without resorting to IIFE.
+
+In summary, while the prevalence of IIFE has reduced with modern JavaScript features, it remains a useful pattern for scenarios where a function needs to be executed once or when working with legacy code that uses `var` for variable declarations.
