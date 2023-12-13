@@ -29,3 +29,78 @@ In this section, you're covering various array methods in JavaScript. Here's a s
    - Returns a string.
 
 ______________________________________________________________________________________________________________________________________
+   AT METHOD
+_____________
+The `at` method is a new addition to JavaScript introduced in ECMAScript 2022 (ES2022).
+It is primarily designed for accessing elements in arrays or characters in strings using a method syntax
+rather than the traditional bracket notation. Here's an explanation of its usage:
+
+### Array Usage:
+
+1. **Basic Array Access:**
+   - Traditional Bracket Notation: `array[0]`
+   - New `at` Method: `array.at(0)`
+
+   ```javascript
+   const array = [23, 11, 64];
+
+   // Traditional way
+   console.log(array[0]); // Output: 23
+
+   // Using the at method
+   console.log(array.at(0)); // Output: 23
+   ```
+
+2. **Getting the Last Element:**
+   - Traditional Bracket Notation: `array[array.length - 1]`
+   - Using `slice` and Bracket Notation: `array.slice(-1)[0]`
+   - New `at` Method: `array.at(-1)`
+
+   ```javascript
+   const array = [23, 11, 64];
+
+   // Traditional way
+   console.log(array[array.length - 1]); // Output: 64
+
+   // Using slice and bracket notation
+   console.log(array.slice(-1)[0]); // Output: 64
+
+   // Using the at method
+   console.log(array.at(-1)); // Output: 64
+   ```
+
+### String Usage:
+
+The `at` method is not limited to arrays; it can also be used with strings.
+
+```javascript
+const str = 'jonas';
+
+// Using the at method on a string
+console.log(str.at(0)); // Output: 'j'
+
+// Getting the last character of a string
+console.log(str.at(-1)); // Output: 's'
+```
+
+### Choosing Between `at` and Bracket Notation:
+
+- **Use `at` for Method Chaining:**
+  If you plan to chain multiple array or string methods, the `at` method can make the syntax more consistent and readable.
+
+  ```javascript
+  const result = array
+    .filter(num => num > 20)
+    .map(num => num * 2)
+    .at(0); // Chaining methods and accessing an element in one line
+  ```
+
+- **Use Bracket Notation for Simplicity:**
+  If you need a quick and straightforward way to access elements, especially when you are only dealing with the first or last element, sticking to the traditional bracket notation might be more concise.
+
+  ```javascript
+  const firstElement = array[0];
+  const lastElement = array[array.length - 1];
+  ```
+
+In summary, the `at` method provides a modern syntax for accessing array elements and characters in strings, and its usage can depend on the specific use case and personal preference. It is particularly handy for method chaining and accessing elements from the end of arrays or strings.
