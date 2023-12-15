@@ -1,0 +1,59 @@
+Map
+_______________________________________
+The map function is used to transform each element in an array based on a given function.
+
+Example:
+Suppose you have an array of numbers and you want to create a new array where each number is doubled.
+
+javascript
+Copy code
+const numbers = [1, 2, 3, 4, 5];
+
+const doubledNumbers = numbers.map(function (num) {
+  return num * 2;
+});
+
+console.log(doubledNumbers);
+// Output: [2, 4, 6, 8, 10]
+In this example, map applies the provided function to each element in the numbers array, resulting in a new array (doubledNumbers) where each element is double the corresponding element in the original array.
+
+FIlter
+_______________________________________
+The filter function is used to create a new array containing elements that satisfy a certain condition.
+
+Example:
+Let's say you have an array of numbers, and you want to filter out only the even numbers.
+
+javascript
+Copy code
+const numbers = [1, 2, 3, 4, 5];
+
+const evenNumbers = numbers.filter(function (num) {
+  return num % 2 === 0;
+});
+
+console.log(evenNumbers);
+// Output: [2, 4]
+In this example, filter creates a new array (evenNumbers) containing only the elements from the original array (numbers) that satisfy the condition (being even).
+
+Reduce
+_______________________________________
+
+The reduce function is used to accumulate values in an array and reduce them to a single value.
+
+Example:
+Suppose you have an array of numbers and you want to find their sum.
+
+javascript
+Copy code
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce(function (accumulator, num) {
+  return accumulator + num;
+}, 0);
+
+console.log(sum);
+// Output: 15
+In this example, reduce takes an accumulator (which starts at 0) and iterates through each element in the array (numbers),
+adding the current element to the accumulator.
+The final result is the sum of all numbers in the array.
