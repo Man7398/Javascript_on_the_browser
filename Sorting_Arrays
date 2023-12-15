@@ -1,0 +1,49 @@
+In this section, we discussed sorting arrays in JavaScript using the built-in `sort` method. The `sort` method, by default, sorts elements as strings, which may not work as expected for numbers. We explored the need for a compare function to correctly sort numeric values.
+
+Here are the key takeaways:
+
+1. **Sorting Strings:**
+   - The `sort` method is used to sort arrays.
+   - By default, it sorts elements as strings, leading to unexpected results for numbers.
+
+   ```javascript
+   const owners = ["Jonas", "Zach", "Adam", "Martha"];
+   owners.sort(); // Mutates the original array
+   console.log(owners); // Output: ["Adam", "Jonas", "Martha", "Zach"]
+   ```
+
+2. **Sorting Numbers:**
+   - For numeric sorting, a compare function is needed.
+   - The compare function should return a positive number if a should come before b, a negative number if b should come before a, and 0 if their order should remain unchanged.
+
+   ```javascript
+   const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+   movements.sort((a, b) => a - b); // Sorts in ascending order
+   console.log(movements); // Output: [-650, -400, -130, 70, 200, 450, 1300, 3000]
+   ```
+
+3. **Toggle Sorting:**
+   - Implemented a state variable (`sorted`) to toggle between sorting and displaying the original array order.
+   - Used an event listener to trigger sorting when a "Sort" button is clicked.
+
+   ```javascript
+   let sorted = false;
+
+   btnSort.addEventListener("click", function (e) {
+     e.preventDefault();
+     sorted = !sorted;
+     displayMovements(currentAccount.movements, sorted);
+   });
+   ```
+
+4. **Displaying Movements:**
+   - Modified the `displayMovements` function to conditionally sort the movements array based on the `sort` parameter.
+
+   ```javascript
+   function displayMovements(movements, sort = false) {
+     const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+     // Rest of the function
+   }
+   ```
+
+With this, the banking application is now complete, and you've learned how to implement features like displaying transactions, computing usernames, and sorting movements. Congratulations on completing this section!
