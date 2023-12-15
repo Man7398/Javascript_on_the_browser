@@ -1,0 +1,38 @@
+Template literals, introduced in ECMAScript 6 (ES6), provide a convenient way to embed expressions and create strings in JavaScript. They use backticks (\`) as delimiters, allowing for easy interpolation of variables and expressions into a string. Here's a basic example:
+
+```javascript
+const name = "John";
+const age = 30;
+
+// Using template literals
+const message = `Hello, my name is ${name} and I am ${age} years old.`;
+
+console.log(message);
+```
+
+In the example above, the `${}` syntax is used to embed variables directly into the string. This is called string interpolation. It's more concise and readable compared to traditional string concatenation using the `+` operator.
+
+Template literals also support multi-line strings without the need for escape characters:
+
+```javascript
+const multiLineMessage = `
+  This is a
+  multi-line
+  string using template literals.
+`;
+
+console.log(multiLineMessage);
+```
+
+Besides variables and expressions, template literals can also include expressions and function calls:
+
+```javascript
+const a = 5;
+const b = 10;
+
+const sumMessage = `The sum of ${a} and ${b} is ${a + b}.`;
+
+console.log(sumMessage);
+```
+
+Template literals make it easier to create complex strings, especially in scenarios where you need to include variables or expressions within the text.
