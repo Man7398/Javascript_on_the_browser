@@ -1,0 +1,25 @@
+To summarize, JavaScript has two main timers:
+
+1. **setTimeout:**
+   - Executes a callback function once after a specified delay.
+   - Arguments after the delay value are passed as parameters to the callback.
+   - Example:
+     ```javascript
+     setTimeout(() => {
+       console.log("Here is your pizza 🍕");
+     }, 3000); // Executes after 3 seconds
+     ```
+
+   - Can be canceled before the delay using `clearTimeout`.
+
+2. **setInterval:**
+   - Repeatedly executes a callback function at specified intervals.
+   - Example:
+     ```javascript
+     setInterval(() => {
+       console.log(new Date()); // Displays current time every second
+     }, 1000); // Executes every 1 second
+     ```
+
+   - Continues indefinitely until explicitly stopped.
+   - Suitable for creating periodic tasks, like a clock.
