@@ -1,0 +1,38 @@
+In JavaScript, there are four ways to create dates using the new date constructor function:
+
+1. **Current Date and Time:**
+   ```javascript
+   let now = new Date();
+   console.log(now);
+   ```
+
+2. **Parse from Date String:**
+   ```javascript
+   let christmas = new Date("December 24, 2015");
+   console.log(christmas);
+   ```
+
+3. **Pass Year, Month, Day, etc.:**
+   ```javascript
+   let specificDate = new Date(2037, 10, 19, 15, 23, 5);
+   console.log(specificDate);
+   ```
+
+   Note: Months are zero-based, so November is represented as 10.
+
+4. **From Milliseconds Since Unix Time:**
+   ```javascript
+   let unixTime = new Date(0); // January 1, 1970
+   let futureDate = new Date(unixTime.getTime() + (3 * 24 * 60 * 60 * 1000));
+   console.log(futureDate);
+   ```
+
+   This calculates a date three days after the Unix time.
+
+Dates have methods like `getFullYear`, `getMonth` (zero-based), `getDate`, `getDay` (day of the week), `getHours`, `getMinutes`, `getSeconds`, and `getTime` (timestamp).
+
+You can also set date components using methods like `setFullYear` and more. Autocorrection happens, for example, turning November 31 into December 1.
+
+Lastly, `Date.now()` gives the current timestamp.
+
+In the next video, the tutorial will likely cover how to use these fundamentals to enhance a banking application with date functionality.
