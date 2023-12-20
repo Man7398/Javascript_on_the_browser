@@ -37,3 +37,39 @@ ________________________________________________________________________________
 
 4. **Real-world Example:**
    - When you click a button, JavaScript might change the text on the page or show/hide elements.
+____________________________________________________________________________________________________________________________________
+
+DOM Manipulation by moving elements
+
+### Selecting Elements:
+
+- `document` refers to the entire HTML document.
+- `document.documentElement` selects the document element.
+- `document.head` selects the head element.
+- `document.body` selects the body element.
+- `document.querySelector()` selects the first element matching the given CSS selector.
+- `document.querySelectorAll()` selects all elements matching the given CSS selector.
+- `document.getElementById()` selects an element by its ID.
+- `document.getElementsByTagName()` selects elements by their tag name.
+- `document.getElementsByClassName()` selects elements by their class name.
+
+### Creating and Inserting Elements:
+
+- `document.createElement(tagName)` creates a new DOM element.
+- `element.classList.add(className)` adds a class to an element.
+- `element.textContent` sets the text content of an element.
+- `element.innerHTML` sets the HTML content of an element.
+- `parentElement.prepend(childElement)` inserts an element as the first child.
+- `parentElement.append(childElement)` inserts an element as the last child.
+- `parentElement.before(siblingElement)` inserts an element before a sibling.
+- `parentElement.after(siblingElement)` inserts an element after a sibling.
+- `node.cloneNode(true)` clones an element and its children.
+
+### Deleting Elements:
+
+- `element.remove()` removes an element from the DOM.
+- In older versions, `parentElement.removeChild(childElement)` was used to remove a child element.
+
+Remember, the `remove()` method is more straightforward and efficient for removing elements.
+
+This quick reference will be handy for future reference when working with DOM manipulation in JavaScript.
