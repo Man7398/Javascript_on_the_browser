@@ -145,3 +145,64 @@ heading.addEventListener('mouseenter', handleMouseEnter);
 These examples demonstrate how to handle events using `addEventListener`, `on-event` property, and HTML attribute. Additionally, the removal of an event listener using `removeEventListener` is illustrated.
 
 Please note that the second method (`on-event` property) and the third method (HTML attribute) are not commonly used, and it's generally recommended to use `addEventListener` for better flexibility and maintainability.
+________________________________________________________________________________________________________________________________________________________________________
+
+EVent Propagation
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Example</title>
+</head>
+<body>
+
+    <button id="myButton">Click me!</button>
+
+    <script>
+        // Function to handle the capturing phase
+        function capturingPhaseHandler() {
+            console.log("Capturing Phase: Ancestor capturing the event");
+        }
+
+        // Function to handle the bubbling phase
+        function bubblingPhaseHandler() {
+            console.log("Bubbling Phase: Ancestor bubbling the event");
+        }
+
+        // Function to handle the target phase
+        function targetPhaseHandler() {
+            console.log("Target Phase: Button clicked!");
+        }
+
+        // Get the button element
+        var myButton = document.getElementById("myButton");
+
+        // Attach event listeners for the capturing, target, and bubbling phases
+        myButton.addEventListener("click", capturingPhaseHandler, true); // Capturing phase
+        myButton.addEventListener("click", targetPhaseHandler); // Target phase
+        myButton.addEventListener("click", bubblingPhaseHandler); // Bubbling phase
+    </script>
+
+</body>
+</html>
+```
+
+In this example:
+
+- We have a button element with the ID "myButton."
+- We've defined three event handler functions: `capturingPhaseHandler`, `targetPhaseHandler`, and `bubblingPhaseHandler`.
+- We've attached these event handlers to the button for different phases of event propagation:
+  - `capturingPhaseHandler` is attached during the capturing phase by setting the third parameter of `addEventListener` to `true`.
+  - `targetPhaseHandler` is attached for the target phase (no third parameter, or `false`).
+  - `bubblingPhaseHandler` is attached during the bubbling phase (default behavior).
+
+When you click the button, you'll see the following order of log messages in the console:
+
+1. Capturing Phase: Ancestor capturing the event
+2. Target Phase: Button clicked!
+3. Bubbling Phase: Ancestor bubbling the event
+
+This sequence illustrates how the click event propagates through the capturing, target, and bubbling phases. The capturing phase starts from the root ancestor and goes down to the target element, followed by the target phase, and then the bubbling phase goes back up.
