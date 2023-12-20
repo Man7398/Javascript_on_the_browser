@@ -100,3 +100,49 @@ In this lecture, we covered various aspects of working with styles, attributes, 
 Remember to avoid using `element.className` for adding or removing classes, as it overrides existing classes.
 
 This serves as a reference for working with styles, attributes, and classes in JavaScript. Now, let's move on to working on our project in the next lecture.
+___________________________________________________________________________________________________________________________________________________________________
+
+Certainly! Handling events in JavaScript can be done in various ways. Here's a concise overview of three common methods:
+
+### Method 1: Using `addEventListener` (Modern Approach)
+```javascript
+const heading = document.querySelector('h1');
+
+function handleMouseEnter() {
+    alert('Mouse entered the heading');
+}
+
+heading.addEventListener('mouseenter', handleMouseEnter);
+```
+
+### Method 2: Using `on-event` Property (Older Approach)
+```javascript
+const heading = document.querySelector('h1');
+
+function handleMouseEnter() {
+    alert('Mouse entered the heading');
+}
+
+heading.onmouseenter = handleMouseEnter;
+```
+
+### Method 3: Using HTML Attribute (Not Recommended)
+```html
+<h1 onclick="alert('Mouse clicked on the heading')">Click me</h1>
+```
+
+### Removing Event Listener
+```javascript
+const heading = document.querySelector('h1');
+
+function handleMouseEnter() {
+    alert('Mouse entered the heading');
+    heading.removeEventListener('mouseenter', handleMouseEnter);
+}
+
+heading.addEventListener('mouseenter', handleMouseEnter);
+```
+
+These examples demonstrate how to handle events using `addEventListener`, `on-event` property, and HTML attribute. Additionally, the removal of an event listener using `removeEventListener` is illustrated.
+
+Please note that the second method (`on-event` property) and the third method (HTML attribute) are not commonly used, and it's generally recommended to use `addEventListener` for better flexibility and maintainability.
