@@ -73,3 +73,30 @@ DOM Manipulation by moving elements
 Remember, the `remove()` method is more straightforward and efficient for removing elements.
 
 This quick reference will be handy for future reference when working with DOM manipulation in JavaScript.
+
+_______________________________________________________________________________________________________________________________________________________
+STYLES
+In this lecture, we covered various aspects of working with styles, attributes, and classes in JavaScript. Here's a quick summary:
+
+### Styles:
+
+- Use `element.style.property` to set inline styles on an element.
+- Use `getComputedStyle(element)` to get the computed styles of an element.
+
+### Attributes:
+
+- Use `element.getAttribute(attribute)` to get the value of an attribute.
+- Use `element.setAttribute(attribute, value)` to set the value of an attribute.
+- Special handling for `href` attributes on links and `src` attributes on images to differentiate between absolute and relative URLs.
+- Data attributes start with "data-" and can be accessed through the `element.dataset` object.
+
+### Classes:
+
+- Use `element.classList.add(className)` to add a class.
+- Use `element.classList.remove(className)` to remove a class.
+- Use `element.classList.toggle(className)` to toggle a class.
+- Use `element.classList.contains(className)` to check if an element has a class.
+
+Remember to avoid using `element.className` for adding or removing classes, as it overrides existing classes.
+
+This serves as a reference for working with styles, attributes, and classes in JavaScript. Now, let's move on to working on our project in the next lecture.
