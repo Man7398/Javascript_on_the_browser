@@ -8,7 +8,7 @@ Arrays:
   - When data manipulation is required (many array methods are available).
 
 
-### Sets:
+Sets:
 - **Use:** Collections of unique values.
 - **When to Choose:**
   - When working with unique values.
