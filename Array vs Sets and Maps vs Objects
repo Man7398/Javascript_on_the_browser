@@ -1,6 +1,6 @@
 In summary, let's compare the built-in data structures in JavaScript (arrays, sets, objects, and maps) and understand when to use each of them:
 
-### Arrays:
+Arrays:
 - **Use:** Simple lists of values.
 - **When to Choose:**
   - When values need to be stored in order.
