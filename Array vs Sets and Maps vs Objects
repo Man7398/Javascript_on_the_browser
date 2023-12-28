@@ -7,7 +7,6 @@ Arrays:
   - When values might contain duplicates.
   - When data manipulation is required (many array methods are available).
 
-
 Sets:
 - **Use:** Collections of unique values.
 - **When to Choose:**
