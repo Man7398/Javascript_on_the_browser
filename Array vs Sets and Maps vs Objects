@@ -4,7 +4,8 @@ Arrays:
 - **Use:** Simple lists of values.
 - **When to Choose:**
   - When values need to be stored in order.
-
+  - When values might contain duplicates.
+  - When data manipulation is required (many array methods are available).
 
 Sets:
 - **Use:** Collections of unique values.
