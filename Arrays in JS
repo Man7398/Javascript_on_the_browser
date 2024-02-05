@@ -5,7 +5,6 @@ Creating Arrays:
 Using the literal syntax with square brackets: const friends = ["Michael", "Steven", "Peter"];
 Using the Array function: const years = new Array(1991, 1984, 2008, 2020);
 Accessing Elements:
-
 Arrays are zero-based, so the first element is accessed with index 0.
 Example: console.log(friends[0]); // Output: Michael
 Array Length:
