@@ -1,7 +1,6 @@
 In this section, you're covering various array methods in JavaScript. Here's a summary of the methods you've discussed:
 
 1. **Slice Method:**
-
    - Syntax: `array.slice(begin, end)`
    - Returns a shallow copy of a portion of an array without modifying the original array.
    - The `begin` parameter indicates the starting index, and the `end` parameter (optional) indicates the end index (not included in the output).
